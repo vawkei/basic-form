@@ -1,7 +1,7 @@
 import classes from "./SimpleForm.module.css";
 import { useState } from "react";
 
-const SimpleForm = (props) => {
+const SimpleForm = () => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredNameTouched, setEnteredNameTouched] = useState(false);
   // const [formIsValid, setFormIsValid] = useState(false);

@@ -1,33 +1,35 @@
-import { useState } from "react";
+//These are codes to use hooks with the form, but choose not to, I am not really a fan of hooks, reason why i didnt implement it.
 
-const useInput = (validateValue) => {
-  const [enteredValue, setEnteredValue] = useState("");
-  const [isTouched, setIsTouched] = useState(false);
+// import { useState } from "react";
 
-  const valueIsValid = validateValue(enteredValue);
-  const hasError = !valueIsValid && isTouched;
+// const useInput = (validateValue) => {
+//   const [enteredValue, setEnteredValue] = useState("");
+//   const [isTouched, setIsTouched] = useState(false);
 
-  const valueChangeHandler = (e) => {
-    setEnteredValue(e.target.value);
-  };
+//   const valueIsValid = validateValue(enteredValue);
+//   const hasError = !valueIsValid && isTouched;
 
-  const InputBlurHandler = (e) => {
-    setIsTouched(true);
-  };
+//   const valueChangeHandler = (e) => {
+//     setEnteredValue(e.target.value);
+//   };
 
-  const reset = () => {
-    setEnteredValue("");
-    setIsTouched(false);
-  };
+//   const InputBlurHandler = (e) => {
+//     setIsTouched(true);
+//   };
 
-  return {
-    value: enteredValue,
-    hasError: hasError,
-    valueChangeHandler,
-    InputBlurHandler,
-    isValid: valueIsValid,
-    reset,
-  };
-};
+//   const reset = () => {
+//     setEnteredValue("");
+//     setIsTouched(false);
+//   };
 
-export default useInput;
+//   return {
+//     value: enteredValue,
+//     hasError: hasError,
+//     valueChangeHandler,
+//     InputBlurHandler,
+//     isValid: valueIsValid,
+//     reset,
+//   };
+// };
+
+// export default useInput;
